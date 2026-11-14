@@ -35,9 +35,15 @@ th{color:#6b7280;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
 .note{font-size:13px;color:#6b7280} .rec{font-size:13px;background:#eef2ff;padding:12px;border-radius:8px}
 .grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
 @media(max-width:640px){.kpis{grid-template-columns:1fr 1fr}.links,.grid2{grid-template-columns:1fr}h1{font-size:27px}}
+.site-header{background:#fff;border-bottom:1px solid #e5e5e3;margin:-24px -24px 20px;padding:14px 24px;display:flex;align-items:center;gap:16px}
+.site-header a.brand{font-weight:700;font-size:18px;color:#1c1c1e;text-decoration:none}
+.site-header a.back{color:#2563eb;text-decoration:none;font-size:15px}
+.site-footer{border-top:1px solid #e5e5e3;margin:24px -24px -24px;padding:20px 24px;font-size:13px;color:#6b7280;display:flex;flex-wrap:wrap;gap:8px 20px;align-items:center}
+.site-footer a{color:#2563eb;text-decoration:none}
 </style>
 </head>
 <body>
+<header class="site-header"><a class="brand" href="https://courseoss.com/">CourseOSS</a><a class="back" href="https://courseoss.com/">&larr; Back to courseoss.com</a></header>
 <div class="wrap">
 <span class="badge">Demo — Synthetic • Acme Cafe, Singapore • Not real sales</span>
 <h1>Acme Cafe — Sales</h1>
@@ -150,6 +156,18 @@ th{color:#6b7280;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
 <p class="rec"><b>Reconciliation:</b> Total S$8,420 = Dishes S$8,420 = Payments S$8,420 • Orders 1,124 • Source: Odoo POS export (sample) • Updated 31 Oct 2026</p>
 <p class="note">Acme Cafe, Singapore — Mon–Sun, 11am–9pm, break 2–6pm • Tax: Not registered — 0% • Currency SGD, Asia/Singapore • Year end 31 Dec. This sample is synthetic demo data. Your real dashboard starts empty, with Pending where you have no data yet.</p>
 </div>
+
+<div class="card" id="try-it">
+<h2>Try it in Muse — build your own dashboard</h2>
+<p class="note">Get the setup file, attach it to a new Muse chat, then paste this prompt:</p>
+<p id="prompt-text" style="background:#f4f4f2;border:1px solid #e5e5e3;border-radius:8px;padding:14px;font-size:15px;line-height:1.6">Follow the attached “Muse for F&amp;B — Sales Dashboard Setup” guide exactly. Ask me one question at a time, with tap buttons where you can, and offer Skip / Pending every time. Don’t ask me a list of questions. Never ask for a password in chat. If a system needs a login, ask me to add it to my Muse Secure Vault. Start now with “Start setup”.</p>
+<p><button class="copy-btn" type="button" style="background:#2563eb;color:#fff;border:0;border-radius:8px;padding:10px 18px;font-size:15px;cursor:pointer">Copy prompt</button></p>
+<p class="note">Get the setup file (v7) on Buy Me a Coffee — <a href="https://buymeacoffee.com/bencheng/e/596578">Muse for F&amp;B — Sales Dashboard Setup</a>, free with code <b>OPENB11</b> (100% off). Or download it from <a href="https://github.com/benczb/muse-spaces-fnb-sales-ga4/blob/main/Muse_for_F_B___Sales_Dashboard_Setup_v7.md">the GitHub repo</a>.</p>
 </div>
+<script>
+document.querySelector('.copy-btn').addEventListener('click', async function(){ var btn = this; var text = document.getElementById('prompt-text').innerText; var done = false; try { await navigator.clipboard.writeText(text); done = true; } catch(e){ var ta = document.createElement('textarea'); ta.value = text; ta.style.position = 'fixed'; ta.style.opacity = '0'; document.body.appendChild(ta); ta.select(); try { done = document.execCommand('copy'); } catch(_){} ta.remove(); } btn.textContent = done ? 'Copied ✓' : 'Copy failed'; setTimeout(function(){ btn.textContent = 'Copy prompt'; }, 1600); });
+</script>
+</div>
+<footer class="site-footer"><span>© 2026 <a href="https://courseoss.com/">CourseOSS</a></span><span>Practical AI workshops and implementation support</span><a href="https://courseoss.com/">courseoss.com</a><a href="https://courseoss.com/privacy">Privacy policy</a></footer>
 </body>
 </html>

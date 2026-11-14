@@ -2,7 +2,7 @@
 
 A sales dashboard for F&B owners, built with Muse. This repo holds the Acme Cafe demo: synthetic data only, not real sales.
 
-Live demo: https://acne-sample-musedashboard.pages.dev/
+Live demo: https://fnb.courseoss.com/ (also https://muse-spaces-fnb-sales-ga4.tembusu.workers.dev/)
 
 ## What is in this repo
 

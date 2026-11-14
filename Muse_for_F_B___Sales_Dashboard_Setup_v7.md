@@ -368,7 +368,8 @@ No long explanations under the charts.
 Below the sales charts. Separate from the sales headline numbers — the headlines stay sales-only.
 
 - **Google Analytics — this month vs last month:** Users, Sessions, Page views — each with + / - % vs last month. Pending until GA4 is connected.
-- **Google reviews — this month vs last month:** Reviews received this month, total reviews, average rating — each with + / - vs last month, plus the latest 3 reviews, short. Pending until Google Business Profile is connected. Muse drafts replies, owner posts, no auto-posting, no fake / incentivised reviews.
+- **Google reviews — this month vs last month:** Reviews received this month, total reviews, average rating — each with + / - vs last month, plus the latest 3 reviews, short. Pending until Google Business Profile is connected. No fake / incentivised reviews.
+- **Google review draft replies:** Under the latest 3 reviews, Muse drafts one reply per review — warm, short, mentions something specific from the review. Each draft sits in its own box with a **Copy reply** button. The owner reviews, edits and posts the reply themselves. No auto-posting, ever. A new review gets a new draft the next time the dashboard updates.
 
 ### Inventory level
 
@@ -462,6 +463,7 @@ All sales figures below are **Demo / Synthetic** — not real money, not real sa
 - **Demo payments:** PayNow / card / cash mix, weekend peaks **(Demo — Synthetic)**
 - **Demo Google Analytics — this month vs last month (Demo — Synthetic):** Users 1,240 (+18% vs last month), Sessions 1,860 (+15% vs last month), Page views 4,320 (+12% vs last month)
 - **Demo Google reviews — this month vs last month (Demo — Synthetic):** Reviews received this month 14 (+6 vs last month), total reviews 128, average rating 4.6 stars (+0.1 vs last month)
+- **Demo Google review draft replies (Demo — Synthetic):** Latest 3 reviews, each with a Muse-drafted reply and a Copy reply button: (1) “Great chicken chop, fast service.” (5 stars) → “Thank you! So glad you enjoyed the Grilled Chicken Chop — and that service was quick. Hope to see you again soon at Acme Cafe!” (2) “Good lunch spot, busy on weekends.” (4 stars) → “Thanks for the kind words! Weekends do get busy — come a little earlier, or on a weekday, and we’ll have a table ready for you.” (3) “Kopi is solid, will be back.” (5 stars) → “Thank you! Our kopi is brewed fresh every morning — glad it hit the spot. See you next time!” Owner reviews, edits and posts. No auto-posting.
 - **Google Analytics:** Pending — demo figures above are synthetic only
 - **Google Business Profile / review link:** Pending — demo figures above are synthetic only
 - **Dashboard:** Acme Cafe Sales Dashboard — Best seller + Revenue growth, stock Pending
@@ -594,6 +596,7 @@ No tools section. No long footer. No routine text. No explainers under the chart
 | F23 | Security | No password, username, or login code ever asked in chat; logins go to the Muse Secure Vault only; files (PDF/Excel/CSV) instead of logins where possible | — |
 | F24 | Interview behaviour | One question per message; tap buttons; Skip / Pending every time; Approve after each section; no follow-ups while answering, one nudge only after 3 min silence | — |
 | F25 | Demo labelling | Every demo figure labelled `Demo — Synthetic`; demo and real sales never mixed; demo cleared before real data | 13,781 synthetic sales, 1 Jan 2025 – 9 Nov 2026 |
+| F26 | Google review draft replies | One Muse-drafted reply per latest review, in its own box with a **Copy reply** button; warm, short, mentions something specific; owner reviews, edits and posts; no auto-posting, ever | 3 sample drafts: Chicken Chop reply, busy-weekends reply, kopi reply (see Demo data) |
 
 ## Style tokens (from the mock HTML — do not restyle)
 
@@ -618,7 +621,7 @@ Do this before calling a rebuild "done". This is the step that catches the missi
 
 1. **Mock run:** build the dashboard in a fresh Space from the PRD + mock HTML only (no extra instructions, no peeking at the original Space).
 2. **Section-by-section comparison:** go through the layout table (§ Layout) row by row against the mock. For each row, mark Present / Missing / Different.
-3. **Feature check:** go through the feature table (F1–F25) the same way. Any feature marked Missing or Different is a defect, not a preference.
+3. **Feature check:** go through the feature table (F1–F26) the same way. Any feature marked Missing or Different is a defect, not a preference.
 4. **Numbers check:** every figure in the demo dataset must match exactly (sales, bridge, reconciliation). A wrong number is a defect.
 5. **Log the diffs:** write a short diff log — feature, expected, got, fixed or not. Rebuild until the log is empty.
 6. **A/B with mock examples:** run the same check with the Acme demo data and with a second made-up shop (different name, type, tax) to catch hardcoded values.
@@ -648,7 +651,7 @@ Rules for this build:
 
 - Read Part 2 (the PRD) first, in full, before building anything. The PRD outranks Part 1 and outranks your own preferences. If the PRD and the mock HTML disagree on a number, use the PRD number. If they disagree on layout, use the mock layout and note it in your diff log.
 - Build every section in the PRD layout table, in the same order, top to bottom. Do not skip a section, merge two sections, or add a section that is not in the PRD.
-- Build every feature F1–F25 in the feature table. Do not drop a feature because it looks minor, and do not add a feature because it looks useful.
+- Build every feature F1–F26 in the feature table. Do not drop a feature because it looks minor, and do not add a feature because it looks useful.
 - Use the PRD style tokens exactly: page background #f4f4f2, white cards with #e5e5e3 borders and 12px radius, KPI value 26px bold, chart blue #2563eb, up green #0a7d2c, down/flag red #b3261e. Do not restyle, rebrand, or "modernise" the look.
 - Use the Acme demo dataset from the PRD for the demo build. Every figure must match the PRD exactly, including the sales bridge (7,492 → +202 → +818 → −92 = 8,420) and the reconciliation line (Total S$8,420 = Dishes S$8,420 = Payments S$8,420). Label every demo figure "Demo — Synthetic".
 - Never invent a number, a tax rate, a price, or a login. Anything unknown is "Pending", not a guess.
@@ -658,7 +661,7 @@ Rules for this build:
 When the build is done, run the verification protocol in the PRD before you say it is finished:
 
 1. Compare your build against the mock HTML section by section, using the PRD layout table, and list every row as Present, Missing, or Different.
-2. Check every feature F1–F25 the same way.
+2. Check every feature F1–F26 the same way.
 3. Check every demo number against the PRD.
 4. Show me the diff log. Fix every Missing and Different item, then re-check, until the log is empty.
 5. Then run the same check with a second made-up shop (different name, type, and tax) to catch anything hardcoded to Acme.

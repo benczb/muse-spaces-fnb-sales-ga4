@@ -1,0 +1,155 @@
+<!doctype html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) - GA4 -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-MJB64SJQXW"></script>
+<script>
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+gtag('config', 'G-MJB64SJQXW');
+</script>
+
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Acme Cafe — Sales Dashboard Sample (Demo — Synthetic)</title>
+<style>
+*{box-sizing:border-box}
+body{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;background:#f4f4f2;color:#1c1c1e;margin:0;padding:24px}
+.wrap{max-width:1020px;margin:0 auto}
+.badge{display:inline-block;background:#fff3cd;border:1px solid #d9a400;padding:6px 12px;border-radius:999px;font-size:13px;margin-bottom:12px}
+h1{font-size:34px;margin:0} .sub{color:#6b7280;margin:6px 0 20px}
+.links{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-bottom:16px}
+.linkcard{background:#fff;border:1px solid #e5e5e3;border-radius:12px;padding:14px 16px}
+.linkcard span{font-size:12px;text-transform:uppercase;letter-spacing:.05em;color:#6b7280}
+.linkcard b{display:block;font-size:17px;margin-top:4px}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:16px}
+.card{background:#fff;border:1px solid #e5e5e3;border-radius:12px;padding:18px;margin-bottom:16px}
+.kpi span{font-size:13px;color:#6b7280} .kpi b{font-size:26px;display:block;margin:6px 0} .up{color:#0a7d2c;font-size:14px} .down{color:#b3261e;font-size:14px}
+h2{font-size:19px;margin:0 0 12px} h3{font-size:15px;margin:20px 0 8px}
+table{width:100%;border-collapse:collapse} th,td{text-align:left;padding:9px 6px;border-bottom:1px solid #eee;font-size:15px}
+th{color:#6b7280;font-size:12px;text-transform:uppercase;letter-spacing:.04em}
+.flag{background:#fde8e8;color:#b3261e;padding:2px 8px;border-radius:999px;font-size:12px}
+.bar{height:12px;background:#e5e7eb;border-radius:999px;overflow:hidden;margin:6px 0} .bar i{display:block;height:100%;background:#3f3f46}
+.bar.blue i{background:#2563eb}
+.note{font-size:13px;color:#6b7280} .rec{font-size:13px;background:#eef2ff;padding:12px;border-radius:8px}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:640px){.kpis{grid-template-columns:1fr 1fr}.links,.grid2{grid-template-columns:1fr}h1{font-size:27px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<span class="badge">Demo — Synthetic • Acme Cafe, Singapore • Not real sales</span>
+<h1>Acme Cafe — Sales</h1>
+<p class="sub">Sample month: October 2026 • Sales, inventory, cost of sales &amp; expenses • No full P&amp;L</p>
+
+<div class="links">
+<div class="linkcard"><span>Shopfront</span><b>Courseoss.com</b></div>
+<div class="linkcard"><span>System</span><b>Odoo POS — link Pending</b></div>
+</div>
+
+<div class="kpis">
+<div class="card kpi"><span>Best seller</span><b>Grilled Chicken Chop</b><span class="up">S$1,312 • +18.2%</span></div>
+<div class="card kpi"><span>Revenue growth</span><b>+12.4%</b><span>vs Sep 2026</span></div>
+<div class="card kpi"><span>Sales today — sample day, 31 Oct</span><b>S$273.30</b><span>Demo — Synthetic</span></div>
+<div class="card kpi"><span>Sales this month — Oct</span><b>S$8,420</b><span class="up">+12.4% vs Sep • 1,124 orders</span></div>
+</div>
+
+<div class="card">
+<h2>Daily sales — last 7 days</h2>
+<svg viewBox="0 0 900 220" width="100%" height="200" role="img" aria-label="Daily sales line chart">
+<polyline points="20,170 150,160 280,150 410,140 540,120 670,90 800,100 880,85" fill="none" stroke="#2563eb" stroke-width="3"/>
+<circle cx="20" cy="170" r="5" fill="#2563eb"/><circle cx="150" cy="160" r="5" fill="#2563eb"/><circle cx="280" cy="150" r="5" fill="#2563eb"/><circle cx="410" cy="140" r="5" fill="#2563eb"/><circle cx="540" cy="120" r="5" fill="#2563eb"/><circle cx="670" cy="90" r="5" fill="#2563eb"/><circle cx="800" cy="100" r="5" fill="#2563eb"/><circle cx="880" cy="85" r="5" fill="#2563eb"/>
+</svg>
+<p class="note">Mon S$240 • Tue S$255 • Wed S$268 • Thu S$281 • Fri S$312 • Sat S$368 • Sun S$342 — weekend lunch is the peak.</p>
+<h3>Sales by dish — Oct</h3>
+<p>Grilled Chicken Chop — S$1,312</p><div class="bar"><i style="width:100%"></i></div>
+<p>Chicken Rice — S$980</p><div class="bar"><i style="width:75%"></i></div>
+<p>Laksa — S$760</p><div class="bar"><i style="width:58%"></i></div>
+<p>Kopi / Teh — S$640</p><div class="bar"><i style="width:49%"></i></div>
+<p>Nasi Lemak — S$590</p><div class="bar"><i style="width:45%"></i></div>
+<h3>Sales timing</h3>
+<p>Best day: Saturday • Best time: 12–2pm lunch, then 6–9pm dinner • Closed 2–6pm daily.</p>
+<h3>Daily takings by payment type — Oct</h3>
+<p>PayNow / e-wallet — S$3,850 (45.7%)</p><div class="bar blue"><i style="width:45.7%"></i></div>
+<p>Credit card — S$3,120 (37.1%)</p><div class="bar blue"><i style="width:37.1%"></i></div>
+<p>Cash — S$1,450 (17.2%)</p><div class="bar blue"><i style="width:17.2%"></i></div>
+<p class="note">Filter: day / month / year — this sample is October 2026.</p>
+</div>
+
+<div class="card">
+<h2>Sales bridge — Sep to Oct</h2>
+<p>Sep S$7,492 → Grilled Chicken Chop +S$202 → Other dishes +S$818 → Laksa −S$92 = <b>Oct S$8,420</b></p>
+<h3>Variance — top 5 dishes, Oct vs Sep</h3>
+<table>
+<tr><th>Dish</th><th>Oct</th><th>Change $</th><th>Change %</th><th></th></tr>
+<tr><td>Grilled Chicken Chop</td><td>S$1,312</td><td>+$202</td><td>+18.2%</td><td><span class="flag">Flag &gt;10%</span></td></tr>
+<tr><td>Chicken Rice</td><td>S$980</td><td>+$85</td><td>+9.5%</td><td></td></tr>
+<tr><td>Laksa</td><td>S$760</td><td>−$92</td><td>−10.8%</td><td><span class="flag">Flag &gt;10%</span></td></tr>
+<tr><td>Kopi / Teh</td><td>S$640</td><td>+$40</td><td>+6.7%</td><td></td></tr>
+<tr><td>Nasi Lemak</td><td>S$590</td><td>+$110</td><td>+22.9%</td><td><span class="flag">Flag &gt;10%</span></td></tr>
+</table>
+<p><b>Top movers by $ change:</b> 1. Grilled Chicken Chop +$202 • 2. Nasi Lemak +$110 • 3. Chicken Rice +$85</p>
+</div>
+
+<div class="grid2">
+<div class="card">
+<h2>Inventory level — Oct</h2>
+<table>
+<tr><th>Item</th><th>Level</th><th>Par</th><th>Status</th></tr>
+<tr><td>Grilled Chicken Chop</td><td>42 units</td><td>20</td><td>OK</td></tr>
+<tr><td>Rice</td><td>120 kg</td><td>50 kg</td><td>OK</td></tr>
+<tr><td>Kopi beans</td><td>18 kg</td><td>10 kg</td><td>OK</td></tr>
+</table>
+<p class="note">Stock order timeline: Pending. Items at or below par are flagged Low stock.</p>
+</div>
+<div class="card">
+<h2>Cost of sales — Oct</h2>
+<table>
+<tr><th></th><th>Amount</th><th>%</th></tr>
+<tr><td>Sales</td><td>S$8,420</td><td>100%</td></tr>
+<tr><td>Cost of sales</td><td>S$2,950</td><td>35.0%</td></tr>
+<tr><td><b>Gross profit</b></td><td><b>S$5,470</b></td><td><b>65.0%</b></td></tr>
+</table>
+<p class="note">Grilled Chicken Chop: cost S$4.20 / serving, margin S$8.80 / serving.</p>
+</div>
+</div>
+
+<div class="card">
+<h2>Expenses — Oct</h2>
+<table>
+<tr><th>Category</th><th>Amount</th><th>% of sales</th></tr>
+<tr><td>Rent</td><td>S$2,200</td><td>26.1%</td></tr>
+<tr><td>Utilities</td><td>S$380</td><td>4.5%</td></tr>
+<tr><td>Staff</td><td>S$1,600</td><td>19.0%</td></tr>
+<tr><td>Delivery / packaging</td><td>S$260</td><td>3.1%</td></tr>
+<tr><td>Other</td><td>S$150</td><td>1.8%</td></tr>
+<tr><td><b>Total expenses</b></td><td><b>S$4,590</b></td><td><b>54.5%</b></td></tr>
+<tr><td><b>Net after cost + expenses</b></td><td><b>S$880</b></td><td><b>10.4%</b></td></tr>
+</table>
+</div>
+
+<div class="card">
+<h2>Website &amp; reviews — monthly</h2>
+<table>
+<tr><th></th><th>This month</th><th>vs last month</th></tr>
+<tr><td>Google Analytics — Users</td><td>1,240</td><td class="up">+18%</td></tr>
+<tr><td>Google Analytics — Sessions</td><td>1,860</td><td class="up">+15%</td></tr>
+<tr><td>Google Analytics — Page views</td><td>4,320</td><td class="up">+12%</td></tr>
+<tr><td>Google reviews received</td><td>14</td><td class="up">+6</td></tr>
+<tr><td>Total reviews / Average rating</td><td>128 / 4.6 stars</td><td class="up">+0.1</td></tr>
+</table>
+<p class="note">Latest 3 reviews (sample): “Great chicken chop, fast service.” • “Good lunch spot, busy on weekends.” • “Kopi is solid, will be back.” — Muse drafts replies, owner posts. No auto-posting.</p>
+</div>
+
+<div class="card">
+<h2>3 key drivers</h2>
+<p>• Best seller is driving repeat orders<br>• Weekend lunch is your peak<br>• PayNow is now your largest payment type</p>
+<h3>Reminders</h3>
+<p class="note">• Stock order timeline — Pending<br>• Rent / utilities amounts — in this sample, see Expenses above<br>• Next stock count — Pending</p>
+<p class="rec"><b>Reconciliation:</b> Total S$8,420 = Dishes S$8,420 = Payments S$8,420 • Orders 1,124 • Source: Odoo POS export (sample) • Updated 31 Oct 2026</p>
+<p class="note">Acme Cafe, Singapore — Mon–Sun, 11am–9pm, break 2–6pm • Tax: Not registered — 0% • Currency SGD, Asia/Singapore • Year end 31 Dec. This sample is synthetic demo data. Your real dashboard starts empty, with Pending where you have no data yet.</p>
+</div>
+</div>
+</body>
+</html>

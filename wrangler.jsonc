@@ -1,0 +1,1 @@
+{"$schema":"node_modules/wrangler/config-schema.json","assets":{"directory":"."},"compatibility_date":"2026-11-14","name":"muse-spaces-fnb-sales-ga4","observability":{"enabled":true}}
